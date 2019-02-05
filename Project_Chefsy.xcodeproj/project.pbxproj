@@ -13,6 +13,9 @@
 		1F059030217074F80017D5B9 /* Project_Chefsy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F05902E217074F80017D5B9 /* Project_Chefsy.xcdatamodeld */; };
 		1F059032217074FE0017D5B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F059031217074FE0017D5B9 /* Assets.xcassets */; };
 		1F059035217074FE0017D5B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F059033217074FE0017D5B9 /* LaunchScreen.storyboard */; };
+		1F07FAE22179916C007414DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07FAE12179916C007414DF /* HomeViewController.swift */; };
+		1F07FAE42179998E007414DF /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F07FAE32179998E007414DF /* GoogleService-Info (2).plist */; };
+		59447C05ED7545606E9E3EB3 /* Pods_Project_Chefsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC89A9107C195A20E496D2A /* Pods_Project_Chefsy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		1F059031217074FE0017D5B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F059034217074FE0017D5B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F059036217074FE0017D5B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F07FAE12179916C007414DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1F07FAE32179998E007414DF /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
+		4A4B97DF930793A5B3010A68 /* Pods-Project_Chefsy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_Chefsy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project_Chefsy/Pods-Project_Chefsy.debug.xcconfig"; sourceTree = "<group>"; };
+		59A524421D89956BE06FACC9 /* Pods-Project_Chefsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_Chefsy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project_Chefsy/Pods-Project_Chefsy.release.xcconfig"; sourceTree = "<group>"; };
+		DBC89A9107C195A20E496D2A /* Pods_Project_Chefsy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_Chefsy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59447C05ED7545606E9E3EB3 /* Pods_Project_Chefsy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				1F059026217074F80017D5B9 /* Project_Chefsy */,
 				1F059025217074F80017D5B9 /* Products */,
+				8C57BCF9AA69E69D5AEB97DA /* Pods */,
+				8FFFACBF49C374B97A6BD502 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +69,32 @@
 			children = (
 				1F059027217074F80017D5B9 /* AppDelegate.swift */,
 				1F059029217074F80017D5B9 /* ViewController.swift */,
+				1F07FAE12179916C007414DF /* HomeViewController.swift */,
 				1F05902B217074F80017D5B9 /* Main.storyboard */,
 				1F059031217074FE0017D5B9 /* Assets.xcassets */,
 				1F059033217074FE0017D5B9 /* LaunchScreen.storyboard */,
 				1F059036217074FE0017D5B9 /* Info.plist */,
+				1F07FAE32179998E007414DF /* GoogleService-Info (2).plist */,
 				1F05902E217074F80017D5B9 /* Project_Chefsy.xcdatamodeld */,
 			);
 			path = Project_Chefsy;
+			sourceTree = "<group>";
+		};
+		8C57BCF9AA69E69D5AEB97DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A4B97DF930793A5B3010A68 /* Pods-Project_Chefsy.debug.xcconfig */,
+				59A524421D89956BE06FACC9 /* Pods-Project_Chefsy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8FFFACBF49C374B97A6BD502 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBC89A9107C195A20E496D2A /* Pods_Project_Chefsy.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F059039217074FE0017D5B9 /* Build configuration list for PBXNativeTarget "Project_Chefsy" */;
 			buildPhases = (
+				9B07D1E1362A1BA1A8AFADB7 /* [CP] Check Pods Manifest.lock */,
 				1F059020217074F80017D5B9 /* Sources */,
 				1F059021217074F80017D5B9 /* Frameworks */,
 				1F059022217074F80017D5B9 /* Resources */,
+				0C01B54D0D210DC581852956 /* [CP] Embed Pods Frameworks */,
+				933915C3A6A2A25F3DEC2F79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F07FAE42179998E007414DF /* GoogleService-Info (2).plist in Resources */,
 				1F059035217074FE0017D5B9 /* LaunchScreen.storyboard in Resources */,
 				1F059032217074FE0017D5B9 /* Assets.xcassets in Resources */,
 				1F05902D217074F80017D5B9 /* Main.storyboard in Resources */,
@@ -132,6 +166,73 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C01B54D0D210DC581852956 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Project_Chefsy/Pods-Project_Chefsy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project_Chefsy/Pods-Project_Chefsy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		933915C3A6A2A25F3DEC2F79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Project_Chefsy/Pods-Project_Chefsy-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project_Chefsy/Pods-Project_Chefsy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B07D1E1362A1BA1A8AFADB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Project_Chefsy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F059020217074F80017D5B9 /* Sources */ = {
@@ -141,6 +242,7 @@
 				1F05902A217074F80017D5B9 /* ViewController.swift in Sources */,
 				1F059030217074F80017D5B9 /* Project_Chefsy.xcdatamodeld in Sources */,
 				1F059028217074F80017D5B9 /* AppDelegate.swift in Sources */,
+				1F07FAE22179916C007414DF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +384,7 @@
 		};
 		1F05903A217074FE0017D5B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4B97DF930793A5B3010A68 /* Pods-Project_Chefsy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +402,7 @@
 		};
 		1F05903B217074FE0017D5B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A524421D89956BE06FACC9 /* Pods-Project_Chefsy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

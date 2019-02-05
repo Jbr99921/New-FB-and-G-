@@ -8,18 +8,57 @@
 
 import UIKit
 import CoreData
+import FBSDKCoreKit
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate:UIResponder, UIApplicationDelegate,GIDSignInDelegate,UINavigationControllerDelegate,UITextFieldDelegate{
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+    }
+    
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        
+        // MARK: - Gmail Itegration in App...
+        
+        
+        GIDSignIn.sharedInstance().clientID = "830938921735-dhaj7g8ad5q84mgr1m2p928mn4fi5ltl.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
+
         return true
     }
-
+    
+    // MARK: - Google+ Integration.....
+    
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+//        return GIDSignIn.sharedInstance().handle(url as URL?,
+//                                                 sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+//                                                 annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+//    }
+//    func application(application: UIApplication,openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+//        var options: [String: AnyObject] = [UIApplicationOpenURLOptionsKey.sourceApplication.rawValue: sourceApplication as AnyObject,
+//                                            UIApplicationOpenURLOptionsKey.annotation.rawValue: annotation!]
+//        return GIDSignIn.sharedInstance().handle(url as URL?,
+//                                                    sourceApplication: sourceApplication,
+//                                                    annotation: annotation)
+//    }
+//    
+    
+    
+    
+    
+    
+    
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -36,6 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -44,6 +84,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
+    
+    
+    
+    // MARK: - Its for Facebook Integration Successfully..........
+    
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    
+        // MARK: - for Facebook Integration......
+        
+    let handled: Bool = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        
+        
+        
+        // MARK: - for Google+ integration
+        
+        let Ahendle:Bool = GIDSignIn.sharedInstance().handle(url as URL?,
+                                                 sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                                 annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        
+        return Ahendle
+        return handled
+    }
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+    
+    let handles: Bool = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+    // Add any custom logic here.
+    return handles
+}
+
+    
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
